@@ -99,3 +99,22 @@ Status Code: 201 Created
   "status": "pending",
   "otp": "123456"
 }
+
+# Maps Endpoints Documentation
+
+## Endpoint: `/maps/get-coordinates`
+
+### Description
+This endpoint is used to get the coordinates (latitude and longitude) of a given address.
+
+### Method
+`GET`
+
+### Query Parameters
+The query parameters should be:
+
+- `address` (string, required): The address to get coordinates for. Must be at least 3 characters long.
+
+Example:
+```sh
+curl -X GET "http://localhost:3000/maps/get-coordinates?address=123%20Main%20St"
