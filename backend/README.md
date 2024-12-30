@@ -62,3 +62,40 @@ Example:
     "vehicleType": "car"
   }
 }
+
+
+# Ride Endpoints Documentation
+
+## Endpoint: `/rides/create`
+
+### Description
+This endpoint is used to create a new ride. It accepts user details, pickup location, destination, and vehicle type, and creates a new ride in the database.
+
+### Method
+`POST`
+
+### Request Body
+The request body should be a JSON object containing the following fields:
+
+- `pickup` (string, required): The pickup address. Must be at least 3 characters long.
+- `destination` (string, required): The destination address. Must be at least 3 characters long.
+- `vehicleType` (string, required): The type of the vehicle. Must be one of 'auto', 'car', or 'moto'.
+
+Example:
+```json
+{
+  "pickup": "123 Main St",
+  "destination": "456 Elm St",
+  "vehicleType": "car"
+}
+Status Code: 201 Created
+ Response Body:
+                {
+  "_id": "ride_id_here",
+  "user": "user_id_here",
+  "pickup": "123 Main St",
+  "destination": "456 Elm St",
+  "fare": 100,
+  "status": "pending",
+  "otp": "123456"
+}
