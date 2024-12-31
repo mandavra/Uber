@@ -117,4 +117,4 @@ The query parameters should be:
 
 Example:
 ```sh
-curl -X GET "http://localhost:3000/maps/get-coordinates?address=123%20Main%20St"
+curl -X GET "http://localhost:3000/maps/get-coordinates?address=123%20Main%20St" .
