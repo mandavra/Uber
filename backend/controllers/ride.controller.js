@@ -6,6 +6,7 @@ const rideModel = require('../models/ride.model');
 
 
 module.exports.createRide = async (req, res) => {
+    console.log("🚀 ~ module.exports.createRide= ~ req.body:", req.body)
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });

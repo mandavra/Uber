@@ -23,6 +23,9 @@ const rideSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
+    vehicleType:{
+        type:String,
+    },
 
     status: {
         type: String,
