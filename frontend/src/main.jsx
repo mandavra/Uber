@@ -8,15 +8,15 @@ import CaptainContext from './context/CapatainContext.jsx';
 import SocketProvider from './context/SocketContext.jsx';
 createRoot(document.getElementById('root')).render(
   
-  <StrictMode>
-   <CaptainContext>
-<UserContext>
-  <SocketProvider>
+   <StrictMode>
+    <CaptainContext>
+    <UserContext>
+    <SocketProvider>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </SocketProvider>
-</UserContext>
-</CaptainContext>
-</StrictMode>,
+    </SocketProvider>
+   </UserContext>
+   </CaptainContext>
+  </StrictMode>,
 )

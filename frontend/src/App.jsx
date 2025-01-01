@@ -1,9 +1,19 @@
 import React  from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Start from './pages/Start'
+import UserLogin from './pages/UserLogin'
 import Riding from './pages/Riding'
 import CaptainRiding from './pages/CaptainRiding'
+import UserSignup from './pages/UserSignup'
+import Captainlogin from './pages/Captainlogin'
 import CaptainSignup from './pages/CaptainSignup'
+import UserProtectWrapper from './pages/UserProtectWrapper'
+import Home from './pages/Home'
+import UserLogout from './pages/UserLogout'
+import CaptainLogout from './pages/CaptainLogout'
+import CaptainHome from './pages/CaptainHome'
+import CaptainProtectWrapper from './pages/CaptainProtectWrapper'
+import 'remixicon/fonts/remixicon.css'
 
 
 const App = () => {

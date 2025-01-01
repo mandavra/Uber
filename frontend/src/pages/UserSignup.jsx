@@ -24,16 +24,16 @@ const UserSignup = () => {
   const submitHandler = async (e) => {
     e.preventDefault()
     const newUser = {
-      fullname: {
-        firstname: firstName,
-        lastname: lastName
-      },
+   
+      firstname: firstName,
+      lastname: lastName,
       email: email,
       password: password
     }
-
-    const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/users/register`, newUser)
-
+    
+    const response = await axios.post(`http://localhost:4000/users/register`, newUser)
+    console.log(`hii ${response}`);
+    
     if (response.status === 201) {
       const data = response.data
       setUser(data.user)
