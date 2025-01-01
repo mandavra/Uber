@@ -1,4 +1,9 @@
 import React  from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Start from './pages/Start'
+import Riding from './pages/Riding'
+import CaptainRiding from './pages/CaptainRiding'
+import CaptainSignup from './pages/CaptainSignup'
 
 
 const App = () => {
