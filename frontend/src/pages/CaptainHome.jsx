@@ -82,7 +82,7 @@ const CaptainHome = () => {
             })
         } else {
             gsap.to(ridePopupPanelRef.current, {
-                transform: 'translateY(100%)'
+                transform: 'translateY(0px)'
             })
         }
     }, [ ridePopupPanel ])

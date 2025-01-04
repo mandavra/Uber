@@ -9,7 +9,7 @@ const FinishRide = (props) => {
     const navigate = useNavigate()
 
     async function endRide() {
-        const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/rides/end-ride`, {
+        const response = await axios.post(`http://localhost:4000/rides/end-ride`, {
 
             rideId: props.ride._id
 

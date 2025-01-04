@@ -16,6 +16,7 @@ module.exports.createRide = async (req, res) => {
 
     try {
         const ride = await rideService.createRide({ user: req.user._id, pickup, destination, vehicleType });
+        console.log("🚀 ~ module.exports.createRide= ~ ride:", ride)
         res.status(201).json(ride);
 
         const pickupCoordinates = await mapService.getAddressCoordinate(pickup);
