@@ -38,6 +38,7 @@ const CaptainSignup = () => {
         vehicleType: vehicleType
       }
     }
+    console.log("🚀 ~ submitHandler ~ captainData:", captainData)
 
     const response = await axios.post(`http://localhost:4000/captains/register`, captainData)
 
@@ -45,7 +46,7 @@ const CaptainSignup = () => {
       const data = response.data
       setCaptain(data.captain)
       localStorage.setItem('token', data.token)
-      navigate('/captain-home')
+      navigate('/captain-login')
     }
 
     setEmail('')

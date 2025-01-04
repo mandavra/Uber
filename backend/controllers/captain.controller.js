@@ -12,6 +12,7 @@ module.exports.registerCaptain = async (req, res, next) => {
     }
 
     const { fullname, email, password, vehicle } = req.body;
+    console.log("🚀 ~ module.exports.registerCaptain= ~  req.body:",  req.body)
 
     const isCaptainAlreadyExist = await captainModel.findOne({ email });
 
@@ -32,6 +33,7 @@ module.exports.registerCaptain = async (req, res, next) => {
         capacity: vehicle.capacity,
         vehicleType: vehicle.vehicleType
     });
+    console.log("🚀 ~ module.exports.registerCaptain= ~ captain:", captain)
 
     const token = captain.generateAuthToken();
 

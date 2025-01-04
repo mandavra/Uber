@@ -2,7 +2,7 @@ import React from 'react'
 
 const ConfirmRide = (props) => {
     return (
-        <div>
+        <div >
             <h5 className='p-1 text-center w-[93%] absolute top-0' onClick={() => {
                 props.setConfirmRidePanel(false)
             }}><i className="text-3xl text-gray-200 ri-arrow-down-wide-line"></i></h5>
@@ -28,7 +28,7 @@ const ConfirmRide = (props) => {
                     <div className='flex items-center gap-5 p-3'>
                         <i className="ri-currency-line"></i>
                         <div>
-                            <h3 className='text-lg font-medium'>₹{props.fare[ props.vehicleType ]}</h3>
+                            {/* <h3 className='text-lg font-medium'>₹{props.fare[ props.vehicleType ]}</h3> */}
                             <p className='text-sm -mt-1 text-gray-600'>Cash Cash</p>
                         </div>
                     </div>
