@@ -54,7 +54,7 @@ const LiveTracking = () => {
     }, []);
 
     return (
-        <LoadScript googleMapsApiKey={import.meta.env.AIzaSyBii7TnYxA-ljgoNF0e92z6FF4I0sO8KZo}>
+        <LoadScript googleMapsApiKey="AlzaSyszeMfyP27fz6ZlPQvZZAkT_LpyBaMj-sf">
             <GoogleMap
                 mapContainerStyle={containerStyle}
                 center={currentPosition}

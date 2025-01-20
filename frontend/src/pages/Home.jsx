@@ -45,8 +45,7 @@ const Home = () => {
     }, [ user ])
 
     socket.on('ride-confirmed', ride => {
-
-
+        console.log("🚀 ~ Home ~ ride:", ride)
         setVehicleFound(false)
         setWaitingForDriver(true)
         setRide(ride)
@@ -184,6 +183,8 @@ const Home = () => {
     }
 
     async function createRide() {
+        console.log("create ride");
+        
         const response = await axios.post(`http://localhost:4000/rides/create`, {
             pickup,
             destination,
@@ -193,16 +194,26 @@ const Home = () => {
                 Authorization: `Bearer ${localStorage.getItem('token')}`
             }
         })
-
-
+        console.log("🚀 ~ createRide ~ response:", response)
+        
+ 
     }
 
     return (
         <div className='h-screen relative overflow-hidden'>
             <img className='w-16 absolute left-5 top-5' src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Uber_logo_2018.png" alt="" />
             <div className='h-screen w-screen'>
-                {/* image for temporary use  */}
-                <LiveTracking />
+               
+
+            <img
+          className="h-full w-full object-cover"
+          src="https://miro.medium.com/v2/resize:fit:1400/0*gwMx05pqII5hbfmX.gif"
+          alt=""
+        />
+             
+              {/* <LiveTracking /> */}
+          
+               
             </div>
             <div className=' flex flex-col justify-end h-screen absolute top-0 w-full'>
                 <div className='h-[30%] p-6 bg-white relative'>
@@ -258,6 +269,7 @@ const Home = () => {
             <div ref={vehiclePanelRef} className='fixed w-full z-10 bottom-0 translate-y-full bg-white px-3 py-10 pt-12'>
                 <VehiclePanel
                     selectVehicle={setVehicleType}
+                    // createRide={createRide}
                     fare={fare} setConfirmRidePanel={setConfirmRidePanel} setVehiclePanel={setVehiclePanel} />
             </div>
             <div ref={confirmRidePanelRef} className='fixed w-full z-10 bottom-0 translate-y-full bg-white px-3 py-6 pt-12'>

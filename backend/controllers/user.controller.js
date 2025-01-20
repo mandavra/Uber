@@ -5,7 +5,7 @@ const blackListTokenModel = require('../models/blacklistToken.model');
 
 module.exports.registerUser = async (req, res, next) => {
 
-    // console.log("🚀 ~ module.exports.registerUser= ~ req.body:", req.body)
+
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
@@ -27,7 +27,6 @@ module.exports.registerUser = async (req, res, next) => {
         email,
         password: hashedPassword
     });
-    console.log("🚀 ~ module.exports.registerUser= ~ user:", user)
 
     const token = user.generateAuthToken();
 

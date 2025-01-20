@@ -49,13 +49,15 @@ const CaptainHome = () => {
     }, [])
 
     socket.on('new-ride', (data) => {
-
+        console.log("🚀 ~ socket.on ~ data:", data)
         setRide(data)
         setRidePopupPanel(true)
 
     })
 
-    async function confirmRide() {
+    const confirmRide = async () => {
+        console.log('confining ride');
+        
 
         const response = await axios.post(`http://localhost:4000/rides/confirm`, {
 

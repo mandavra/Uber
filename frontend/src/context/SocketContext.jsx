@@ -9,7 +9,7 @@ const SocketProvider = ({ children }) => {
     useEffect(() => {
         // Basic connection logic
         socket.on('connect', () => {
-            console.log('Connected to server');
+            console.log('Connected to server'+socket.id);
         });
 
         socket.on('disconnect', () => {
@@ -18,7 +18,6 @@ const SocketProvider = ({ children }) => {
 
         return () => {
             socket.off('connect');
-            socket.off('disconnect');
         };
     }, []);
 
